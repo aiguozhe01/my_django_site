@@ -14,8 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # 127.0.0.1:8000 Visiting this local host with no /, then the 'path' takes you to blog.urls
+    path('', include('blog.urls'))
 ]
