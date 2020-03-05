@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACHO BLOG</title>
+</head>
+<body>
+{% if post.publshed_date %}
+    <div>
+        {{ post.published_date }}
+    </div>
+{% endif %}
+<h1>{{ post.title }}</h1>
+<p>{{ post.text|linebreaksbr }}</p>
+</body>
+</html>
