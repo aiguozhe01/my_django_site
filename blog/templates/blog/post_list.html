@@ -11,7 +11,7 @@
             <p>{{ post.text|truncatechars:10|linebreaksbr }}</p>
             <!-- linebreaksbr helps to indent the text -->
 
-            <a href="{% url 'post_detail' pk=post.pk">Comments: {{ post.approved_comments.count }}</a>
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
         </div> 
     {% endfor %}
 {% endblock %}
